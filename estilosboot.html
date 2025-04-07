@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background: linear-gradient(135deg, #007bff, #ff6f00, #00c853);
+      background-size: 300% 300%;
+      animation: gradientShift 8s ease infinite;
+      color: white;
+      padding: 80px 0; 
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+    .navbar {
+        background: linear-gradient(135deg, #007bff, #ff6f00, #00c853);
+        background-size: 300% 300%;
+      animation: gradientShift 8s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+    }
+    .form-section {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Agencia De Motos </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Explora el poder de nuestros motores</h1>
+      <p class="lead">Encuentra la moto de tus sueños.</p>
+    </div>
+  </section>
+  <div class="container mb-5">
+    <h2 class="mb-4 text-center fw-semibold">Nuestros Modelos</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://motociclo.com.mx/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-03-at-16.03.50.jpg" class="card-img-top" alt="Yamaha MT-15">
+          <div class="card-body">
+            <h5 class="card-title">Yamaha MT-15</h5>
+            <p class="card-text">
+              La Yamaha MT-15 combina agresividad, estilo urbano y tecnología avanzada. Equipada con un motor de 155cc con VVA, ofrece un rendimiento impresionante, ideal para quienes buscan adrenalina y control total en la ciudad.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://www.dailymotos.com/wp-content/uploads/2013/10/ktm-1290.jpg" class="card-img-top" alt="KTM Duke 1290">
+          <div class="card-body">
+            <h5 class="card-title">KTM Duke 1290</h5>
+            <p class="card-text">
+              La KTM Duke 1290 es una bestia de alto rendimiento, impulsada por un motor V-Twin de 1301cc. Su diseño agresivo, electrónica de punta y potencia brutal la convierten en una naked imparable para los amantes de la velocidad extrema.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="https://antre-du-motard.com/cdn/shop/articles/kawasaki_h2r_1200x1200.webp?v=1725873104" class="card-img-top" alt="Kawasaki Ninja H2R">
+          <div class="card-body">
+            <h5 class="card-title">Kawasaki Ninja H2R</h5>
+            <p class="card-text">
+              La Kawasaki Ninja H2R es una máquina legendaria, diseñada exclusivamente para pista. Con su motor sobrealimentado de 998cc y más de 300 HP, redefine los límites de la velocidad y la ingeniería con un diseño futurista y brutal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-5">
+    <div class="form-section">
+      <h2 class="mb-4">Cotizaciones</h2>
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" placeholder="Tu nombre">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-control" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary px-4">Enviar</button>
+      </form>
+    </div>
+  </div>
+  <div class="container mb-5">
+    <h2 class="mb-4 text-center fw-semibold">Preguntas Frecuentes</h2>
+    <div class="accordion" id="faq">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            ¿Qué tipo de motos ofrecen?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            Contamos con una selección de motos deportivas de alto rendimiento, incluyendo modelos como la Yamaha MT-15, KTM Duke 1290 y la legendaria Kawasaki Ninja H2R.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            ¿Ofrecen servicio de mantenimiento?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Sí, ofrecemos mantenimiento preventivo y correctivo para todos nuestros modelos, utilizando repuestos originales y técnicos certificados.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            ¿Puedo probar una moto antes de comprarla?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Claro, contamos con pruebas de manejo para ciertos modelos bajo cita previa. ¡Experimenta la potencia antes de decidir!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-5">
+    <h2 class="mb-4 text-center fw-semibold">Clientes Registrados</h2>
+    <table class="table table-bordered table-striped shadow-sm">
+      <thead class="table-primary">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ana Torres</td>
+          <td>ana@ejemplo.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Juan Pérez</td>
+          <td>juan@ejemplo.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="mb-0">© 2025 MyBrand. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
