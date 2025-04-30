@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grand Dog Hotel</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    #loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fff;
+      flex-direction: column;
+    }
+    .loader-img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    .hero {
+      background-image: url('https://granddoghotel.com.mx/wp-content/uploads/2022/07/hero_image_01.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      color: white;
+      text-align: left;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+      margin-top: 56px;
+      position: relative;
+      padding: 20px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 50px;
+    }
+    .hero img {
+      max-width: 50%;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0.7;
+    }
+    .instalaciones-section {
+      padding: 0;
+    }
+    .instalaciones-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      padding: 0;
+      margin: 0;
+      object-fit: cover;
+    }
+    .contacto-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      font-size: 3.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+      color: yellow;
+    }
+    h1.htext {
+      font-size: 3.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+      color: black;
+    }
+    .bone-button {
+      background-color: #FFA500; /* Naranja */
+      color: white;
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      position: relative;
+      text-decoration: none;
+    }
+    .bone-button::before,
+    .bone-button::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #FFA500;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .bone-button::before {
+      left: -10px;
+    }
+    .bone-button::after {
+      right: -10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--Loader-->
+  <div id="loader">
+    <img src="https://granddoghotel.com.mx/wp-content/uploads/2022/07/logo1.png" alt="Grand Dog Hotel" class="loader-img">
+    <div class="spinner-border text-primary" role="status"></div>
+  </div>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top" style="background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <div class="container">
+      <a class="navbar-brand" href="https://granddoghotel.com.mx/">
+        <img src="https://granddoghotel.com.mx/wp-content/uploads/2022/07/logo.png" alt="Grand Dog Hotel Logo" width="150">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark fs-5" href="#instalaciones" style="transition: 0.3s;">Instalaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark fs-5" href="#contacto" style="transition: 0.3s;">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-warning fw-bold d-flex align-items-center px-3 py-2" href="tel:4424662060" style="border-radius: 30px;">
+              <i class="bi bi-telephone me-2"></i> 442 466 2060
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center justify-content-start">
+    <div class="hero-content">
+      <h1>Grand Dog <br></h1>
+      <h1 class="htext"><strong>Hotel</strong></h1>
+      <!-- Carrusel -->
+<div class="container my-3">
+  <div id="miniCarrusel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner text-center bg-light rounded p-3" style="max-width: 400px; margin: 0 auto;">
+      
+      <div class="carousel-item active">
+        <h5 class="text-success mb-1">Guardería Canina</h5>
+        <p style="color: black;" class="mb-0">Ambiente seguro y divertido para tu mascota.</p>
+      </div>
+
+      <div class="carousel-item">
+        <h5 class="text-warning mb-1">Spa y Estética</h5>
+        <p style="color: black;" class="mb-0">Relajación y belleza para consentir a tu perro.</p>
+      </div>
+
+      <div class="carousel-item">
+        <h5 style="color: #e67e22;" class="mb-1">Entrenamiento Profesional</h5>
+        <p style="color: black;" class="mb-0">Clases para perros de todas las edades.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <a href="#contacto" class="bone-button mt-4 d-inline-block">Reserva Ahora</a>
+    </div>
+  
+    <img src="hero_image_01.png" alt="">
+  </section>
+
+  <!--Instalaciones-->
+  <section id="instalaciones" class="instalaciones-section">
+    <div class="container-fluid p-0">
+      <div class="row align-items-center">
+        <div class="col-md-6 p-0 position-relative">
+          <img src="https://granddoghotel.com.mx/wp-content/uploads/2019/07/hero_image_02.png" alt="Instalaciones Grand Dog Hotel" class="img-fluid">
+          <img src="floating_candy.png" alt="" class="position-absolute" style="top: 10%; left: 20%; width: 150px;">
+          <img src="floating_food2.png" alt="" class="position-absolute" style="top: 30%; left: 50%; width: 150px;">
+          <img src="orange_ball.png" alt="" class="position-absolute" style="top: 50%; left: 70%; width: 150px;">
+        </div>
+        <div class="col-md-6 p-5">
+          <h1 class="fw-bold text-black">¡Perros felices <span style="color: yellow;">dueños felices!</span></h1>
+          <h4 class="mt-4">Nos dedicamos al cuidado, entrenamiento y educación de tu perro. Con un equipo de trabajo profesional y entregado a ellos. Nuestro objetivo es brindar un servicio integral de calidad en el cual el dueño y el perro estén al 100 % felices.</h4>
+          <a href="#contacto" class="bone-button mt-4 d-inline-block">Reserva Ahora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--botones-->
+  <section id="botones" class="py-5 text-center">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <button class="btn d-flex justify-content-center align-items-center" style="background-color: #27ae60; color: white; width: 120px; height: 120px; border-radius: 50%;">Guarderia</button>
+        </div>
+        <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <button class="btn d-flex justify-content-center align-items-center" style="background-color: #e67e22; color: white; width: 120px; height: 120px; border-radius: 50%;">Pension</button>
+        </div>
+        <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <button class="btn d-flex justify-content-center align-items-center" style="background-color: #f1c40f; color: white; width: 120px; height: 120px; border-radius: 50%;">Estetica</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <button class="btn d-flex justify-content-center align-items-center" style="background-color: #f1c40f; color: white; width: 120px; height: 120px; border-radius: 50%;">Tienda</button>
+        </div>
+        <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <button class="btn d-flex justify-content-center align-items-center text-center" style="background-color: #27ae60; color: white; width: 120px; height: 120px; border-radius: 50%;">Actividades <br> Ejercicio</button>
+        </div>
+        <div class="col-12 col-md-4 mb-3 d-flex justify-content-center">
+          <button class="btn d-flex justify-content-center align-items-center text-center" style="background-color: #e67e22; color: white; width: 120px; height: 120px; border-radius: 50%;">Supervicion <br> 24/7</button>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Actividades y Ejercicio -->
+  <section id="actividades" class="py-5 text-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-start">
+          <h1 style="color: #f1c40f;" class="mb-4">Actividades</h1>
+            <h1 style="color: black;"><strong>y Ejercicio</strong></h1>
+            <p>El ejercicio es un aspecto fundamental para que tu mascota se mantenga saludable.</p>
+            <p style="font-size: 1rem;">La quema de energía es muy importante en el desarrollo y convivencia de nuestra mascota.</p>
+            <p style="font-size: 1rem;">El no poder cumplir con su paseo diario provoca estrés y trae como consecuencia un mal comportamiento.</p>
+            <i style="color: black; font-size: 1.2rem;" class="bi bi-dribbble"> SOCIALIZAR</i>
+            <i style="color: black; font-size: 1.2rem;" class="bi bi-dribbble"> DIVERTIRSE</i>
+            <i style="color: black; font-size: 1.2rem;" class="bi bi-dribbble"> JUGAR</i>
+            </div>
+            <div class="col-md-6 p-0 text-end">
+            <img 
+            src="https://granddoghotel.com.mx/wp-content/uploads/2019/07/hero_image_03.png" 
+            style="max-width: 90%;"
+            alt="Ejercicio y diversión">
+          </div>
+      </div>
+    </div>
+  </section>
+<!-- cards -->
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-3 d-flex flex-column gap-3">
+      <div class="card text-white bg-danger h-100 border-0 position-relative" style="border-radius: 15px;">
+        <div class="position-absolute top-0 start-0 m-2 fw-bold">DÍA</div>
+        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+          <h4 class="fw-bold">Guardería</h4>
+          <i class="bi bi-building fs-1 my-3"></i>
+          <h3 class="fw-bold mt-2">$120</h3>
+        </div>
+      </div>
+      <div class="card text-white bg-success h-100 border-0 position-relative" style="border-radius: 15px;">
+        <div class="position-absolute top-0 start-0 m-2 fw-bold">NOCHE</div>
+        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+          <h4 class="fw-bold">Pensión</h4>
+          <i class="bi bi-building fs-1 my-3"></i>
+          <h3 class="fw-bold mt-2">$220</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Requisitos -->
+    <div class="col-md-3">
+      <div class="card bg-light h-100 border-0" style="border-radius: 15px;">
+        <div class="card-body d-flex justify-content-center align-items-center text-center">
+          <div>
+            <h5 class="fw-bold mb-3">Requisitos de ingreso</h5>
+            <ul class="list-unstyled mb-0 text-start">
+              <li>+ Carnet de vacunación:</li>
+              <li>- Quíntuple</li>
+              <li>- Séxtuple</li>
+              <li>- Rabia</li>
+              <li>- Desparasitación</li>
+              <li>- Antipulgas</li>
+              <li>- Giardia</li>
+              <li>- Bordetella</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instalaciones -->
+    <div class="col-md-3">
+      <div class="card text-white bg-info h-100 border-0" style="border-radius: 15px;">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+          <h5 class="fw-bold">Instalaciones</h5>
+          <p class="mb-3">¡Conoce nuestras instalaciones! Contamos con alberca con chapoteadero, áreas techadas, áreas para razas pequeñas y más de 2,000 m² de jardín.</p>
+          <a href="#instalaciones" class="btn" style="background-color: transparent; color: yellow; border: 2px solid yellow;">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col-md-3">
+      <div class="card bg-light h-100 border-0" style="border-radius: 15px;">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+          <h5 class="fw-bold">Fotos del día</h5>
+          <p class="mb-3">¡Ven y conoce las fotos que subimos día a día de nuestros huéspedes divirtiéndose!</p>
+          <a href="#fotos" class="btn" style="background-color: transparent; color: #f1c40f; border: 2px solid #f1c40f;">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Comentarios -->
+  <section id="instalaciones" class="instalaciones-section">
+    <div class="container-fluid p-0">
+      <div class="row align-items-center">
+        <div class="col-md-6 p-0 position-relative">
+         <img src="https://granddoghotel.com.mx/wp-content/uploads/2019/07/hero_image_04.png" alt="">
+        </div>
+        <div class="col-md-6 p-5">
+          <h1 class="fw-bold text-black"><span style="color: yellow;">Comentarios</span></h1>
+          <div id="comentariosCarrusel" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+          <blockquote class="blockquote text-center">
+            <p class="mb-4 fs-5">"El mejor lugar para mi perro, siempre regresa feliz, bien cuidado y lleno de energía. ¡Lo recomiendo ampliamente!"</p>
+            <footer class="blockquote-footer">Ana López</footer>
+          </blockquote>
+              </div>
+              <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p class="mb-4 fs-5">"Excelente servicio, las instalaciones son increíbles y el personal siempre está atento a las necesidades de mi mascota."</p>
+            <footer class="blockquote-footer">Carlos Martínez</footer>
+          </blockquote>
+              </div>
+              <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p class="mb-4 fs-5">"Mi perro ama este lugar, el personal es muy amable, profesional y siempre se aseguran de que esté feliz y cómodo."</p>
+            <footer class="blockquote-footer">María Fernández</footer>
+          </blockquote>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#comentariosCarrusel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#comentariosCarrusel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="py-5" style="background-color: #fff;">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h5 class="text-uppercase text-muted fw-bold">Promociones</h5>
+        <h1 class="fw-bold" style="color: #f1c40f;">Membresía Guardería</h1>
+      </div>
+    </div>
+
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card shadow border-0 h-100 text-center rounded-4 p-4">
+          <h6 class="text-uppercase text-warning">Guardería</h6>
+          <h2 class="fw-bold">5 DÍAS</h2>
+          <i class="bi bi-house-door fs-1 my-3" style="color: #093969;"></i>
+          <ul class="list-unstyled text-start px-3 mb-4">
+            <li>✔ Uso de jardines (2000m²)</li>
+            <li>✔ Alberca / chapoteadero</li>
+            <li>✔ Actividades / ejercicio</li>
+            <li>✔ Supervisión 24 hrs.</li>
+          </ul>
+          <h3 class="fw-bold">$550</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow border-0 h-100 text-center rounded-4 p-4 text-white" style="background: #e25e3e;">
+          <h6 class="text-uppercase">Guardería</h6>
+          <h2 class="fw-bold">10 DÍAS</h2>
+          <i class="bi bi-house-door fs-1 my-3" style="color: #093969;"></i>
+          <ul class="list-unstyled text-start px-3 mb-4">
+            <li>✔ Uso de jardines (2000m²)</li>
+            <li>✔ Alberca / chapoteadero</li>
+            <li>✔ Actividades / ejercicio</li>
+            <li>✔ Supervisión 24 hrs.</li>
+          </ul>
+          <h3 class="fw-bold text-white">$1050</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow border-0 h-100 text-center rounded-4 p-4">
+          <h6 class="text-uppercase text-warning">Guardería</h6>
+          <h2 class="fw-bold">20 DÍAS</h2>
+          <i class="bi bi-hospital-bed fs-1 my-3" style="color: #093969;"></i>
+          <ul class="list-unstyled text-start px-3 mb-4">
+            <li>✔ Uso de jardines (2000m²)</li>
+            <li>✔ Alberca / chapoteadero</li>
+            <li>✔ Actividades / ejercicio</li>
+            <li>✔ Supervisión 24 hrs.</li>
+          </ul>
+          <h3 class="fw-bold">$1800</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1 class="fw-bold" style="color: #000;">Check-in</h1>
+      <h1 class="fw-bold" style="color: #f1c40f;">Horarios</h1>
+
+      <div class="d-flex align-items-center my-4">
+        <i class="bi bi-alarm fs-1 text-primary me-3"></i>
+        <div>
+          <div class="fw-bold" style="color: #f1c40f;">8:30 AM - 7:00 PM</div>
+          <small>Lunes a viernes</small>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center mb-4">
+        <i class="bi bi-alarm fs-1 text-primary me-3"></i>
+        <div>
+          <div class="fw-bold" style="color: #f1c40f;">9:00 AM - 2:00 PM</div>
+          <small>Sábados</small>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-start">
+        <i class="bi bi-basket-fill fs-1 text-primary me-3"></i>
+        <div>
+          <div class="fw-bold text-uppercase" style="color: #f1c40f;">Lleva sus juguetes favoritos</div>
+          <small>Si tu mascota experimenta ansiedad cuando no estás, trae con él algún juguete que huela a su hogar.</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-end">
+      <img src="https://granddoghotel.com.mx/wp-content/uploads/2019/07/hero_image_05.png" alt="Check-in mascotas" class="img-fluid" style="max-width: 120%; margin-right: -25%;">
+    </div>
+    </div>
+  <!--Formulario de contacto-->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-start">
+        <img src="https://granddoghotel.com.mx/wp-content/uploads/2019/07/hero_image_06.png" alt="Contacto mascotas" class="img-fluid rounded-start" style="border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%; max-width: 130%; margin-left: -20%;">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-4">Envíanos un mensaje</h2>
+        <form style="max-width: 400px; margin: 0 auto;">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning text-white px-4">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--Contacto-->
+  <section id="contacto" class="contacto-section text-center">
+    <div class="container">
+      <h2 class="mb-4">Contáctanos</h2>
+      <p>Estamos disponibles para cualquier duda o reservación.</p>
+      <p><i class="bi bi-telephone"></i> 442 466 2060</p>
+      <p><i class="bi bi-geo-alt"></i> Querétaro, México</p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('loader').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
