@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand Dog Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .navbar {
+            background: transparent !important;
+            box-shadow: none !important;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar.white-bg {
+            background-color: black !important;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white !important;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://granddoghotel.com.mx/wp-content/uploads/2019/08/hero_inner_contact.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-text {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .contenido {
+            background-color: rgb(255, 255, 255);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+            }
+
+            .navbar-collapse {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="https://granddoghotel.com.mx/">
+                <img src="https://granddoghotel.com.mx/wp-content/uploads/2022/07/logo.png" alt="Grand Dog Hotel Logo" width="150" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white fs-5" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white fs-5" href="instalaciones.html">Instalaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white fs-5" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav align-items-center gap-3 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white fs-5" href="">415 566 2035</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('white-bg');
+            } else {
+                navbar.classList.remove('white-bg');
+            }
+        });
+    </script>
+
+    <!-- principal-->
+    <div class="hero d-flex align-items-center justify-content-start ps-5">
+        <div class="hero-text" style="background-color: transparent; padding: 0; border-radius: 0;">
+            <h5 class="display-4 fw-bold">Contactanos </h5>
+            <h1 class="display-4 fw-bold">¡Bienvenido a nuestro <br> Hotel Canino!</h1>
+            <p class="lead">Para contactarnos vía correo electrónico, <br> por favor llena el siguiente formulario. ¡Gracias!</p>
+        </div>
+    </div>
+
+    <!-- Ola SVG -->
+    <div class="wave">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#ffffff" d="M0,224L60,197.3C120,171,240,117,360,122.7C480,128,600,192,720,218.7C840,245,960,235,1080,202.7C1200,171,1320,117,1380,90.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <section id="contacto" class="contenido">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center my-4">
+                        <i class="bi bi-alarm fs-1 text-primary me-3"></i>
+                        <div>
+                            <div class="fw-bold" style="color: #f1c40f;">8:30 AM - 7:00 PM</div>
+                            <small>Lunes a viernes <br> sabados: 9:30 3:00</small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                        <div>
+                            <div class="fw-bold" style="color: #f1c40f;">Nuestra Ubicación</div>
+                            <small>Av. Nezahualcóyotl 34. Cumbres de Conín, El Marqués, Querétaro.</small>
+                        </div>
+                    </div>
+
+        
+                </div>
+
+                <!-- Formulario -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Envíanos un mensaje</h2>
+                    <form style="max-width: 400px; margin: 0 auto;">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Asunto</label>
+                            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning text-white px-4">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- Mapa y contacto -->
+    <section id="ubicacion" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">¿Dónde estamos?</h2>
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-geo-alt fs-2 text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Dirección</h5>
+                            <p class="mb-0">Av. Nezahualcóyotl 34. Cumbres de Conín, El Marqués, Querétaro.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-telephone fs-2 text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Teléfono</h5>
+                            <p class="mb-0">415 566 2035</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-envelope fs-2 text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-1">Correo electrónico</h5>
+                            <p class="mb-0">contacto@granddoghotel.com.mx</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.1234567890123!2d-100.123456789!3d20.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1234567890abcdef%3A0xabcdef1234567890!2sAv.%20Nezahualc%C3%B3yotl%2034%2C%20Cumbres%20de%20Con%C3%ADn%2C%20El%20Marqu%C3%A9s%2C%20Qro.!5e0!3m2!1ses!2smx!4v1691234567890!5m2!1ses!2smx" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        function toggleNavbar() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('white-bg');
+        }
+    </script>
+</body>
+</html>
